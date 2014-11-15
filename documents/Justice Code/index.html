@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Shamealytics</title>
+
+</head>
+
+<body>
+
+
+<div ng-app="" ng-controller="customersController">
+
+<div>
+ 
+  <br>
+  <input type="text" ng-model="name" /> {{ name }}
+  <br>
+  
+  <ul>
+    <li ng-repeat="cust in customers | filter:name | orderBy:'city'">{{ cust.Name }} - {{cust.City}}</li>
+  </ul>
+  
+  
+</div>
+  
+</div>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+
+  <script src="index.js"></script>
+
+</body>
+
+</html>
